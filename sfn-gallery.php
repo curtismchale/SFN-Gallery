@@ -72,4 +72,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
      *
      */
 
+    register_activation_hook( __FILE__, 'sfn_gallery_install' );
+
+    function sfn_gallery_install(){
+
+        if( version_compare( get_bloginfo( 'version' ), '3.1', '<' ) ) {
+            deactivate_plugins( basename( __FILE__ ) ); /* deactivate plugin if it's less than WP 3.1 */
+        }
+
+    }
+
 ?>
