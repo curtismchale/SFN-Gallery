@@ -26,16 +26,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
     /* callls the new CPT */
-    require_once( dirname(__FILE__).'/includes/add-cpt.php' );
+    require_once( plugin_dir_path( __FILE__ ) . '/includes/add-cpt.php' );
 
     /* callls the new CPT */
-    require_once( dirname(__FILE__).'/includes/add-meta-boxes.php' );
+    require_once( plugin_dir_path( __FILE__ ).'/includes/add-meta-boxes.php' );
 
     /* adds JS */
-    require_once( dirname(__FILE__).'/includes/add-js.php' );
+    require_once( plugin_dir_path( __FILE__ ).'/includes/add-js.php' );
 
     /* adds CSS */
-    require_once( dirname(__FILE__).'/includes/add-css.php' );
+    require_once( plugin_dir_path( __FILE__ ).'/includes/add-css.php' );
 
     add_image_size( 'sfn_gallery_navigation', 30, 30, true ); // adds the nav image for the slider
     add_image_size( 'sfn_gallery_main_image', 600, 235, true ); // main slider image size
