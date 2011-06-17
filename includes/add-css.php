@@ -9,7 +9,7 @@
             $sfnGallerySiteUrl = WP_PLUGIN_URL . '/sfn-gallery/css/sfn-gallery-styles.css';
             $sfnGalleryPluginStyle = WP_PLUGIN_DIR . '/sfn-gallery/css/sfn-gallery-styles.css';
 
-            if( file_exists( $rclPluginStyle ) ) {
+            if( file_exists( $sfnGalleryPluginStyle ) ) {
 
                 wp_register_style( 'sfnGalleryStylesheets', $sfnGallerySiteUrl );
                 wp_enqueue_style( 'sfnGalleryStylesheets' );
