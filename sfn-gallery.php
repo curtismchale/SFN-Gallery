@@ -61,8 +61,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
      *
      * todo support localization
      *
-     * todo install function to check for CPT support
-     *
      * todo uninstall function to remove data from the database
      *      - should prompt user before removing just in case
      *
@@ -75,6 +73,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     register_activation_hook( __FILE__, 'sfn_gallery_install' );
 
     function sfn_gallery_install(){
+
+        /* todo need to provide user message about deactivation */
 
         if( version_compare( get_bloginfo( 'version' ), '3.1', '<' ) ) {
             deactivate_plugins( basename( __FILE__ ) ); /* deactivate plugin if it's less than WP 3.1 */
