@@ -74,7 +74,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
     function sfn_gallery_install(){
 
-        /* todo need to provide user message about deactivation */
+        /*
+         * todo need to provide user message about deactivation
+         * todo detect content_width and set slide to content_width on activation
+         *
+         */
 
         if( version_compare( get_bloginfo( 'version' ), '3.1', '<' ) ) {
             deactivate_plugins( basename( __FILE__ ) ); /* deactivate plugin if it's less than WP 3.1 */
