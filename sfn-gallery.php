@@ -50,17 +50,25 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
      *
      * todo Admin settings
      *      - add ability to pick default slide size
-     *      - custom effects?
      *
      * todo add widget that displays gallery based on Taxonomy
      * todo add shortcode that displays gallery based on taxonomy
      *
+     * todo readme.txt
      *
-     * LATER *
+     *
+     *** LATER ***
+     *
+     * todo support localization
+     *
      * todo install function to check for CPT support
      *
      * todo uninstall function to remove data from the database
      *      - should prompt user before removing just in case
+     *
+     *  todo custom slide effects?
+     *  todo option to not display the navigation thumbnails
+     *  todo option to display side navigation arrows
      *
      */
 
