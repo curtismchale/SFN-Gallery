@@ -43,4 +43,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     add_image_size( 'sfn_gallery_navigation', 30, 30, true ); // adds the nav image for the slider
     add_image_size( 'sfn_gallery_main_image', 600, 235, true ); // main slider image size
 
+    /*
+     *
+     * todo install function to check for CPT support
+     *
+     * todo uninstall function to remove data from the database
+     *      - should prompt user before removing just in case
+     *
+     */
+
 ?>
