@@ -45,6 +45,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
     /*
      *
+     * todo add taxonomy to categorize slides
+     * todo add ability to select taxonomy by slug in the function
+     *
+     * todo Admin settings
+     *      - add ability to pick default slide size
+     *      - custom effects?
+     *
+     * todo add widget that displays gallery based on Taxonomy
+     * todo add shortcode that displays gallery based on taxonomy
+     *
+     *
+     * LATER *
      * todo install function to check for CPT support
      *
      * todo uninstall function to remove data from the database
