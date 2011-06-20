@@ -41,11 +41,55 @@
     // Register and define the settings
     add_action('admin_init', 'sfn_gallery_admin_init');
     function sfn_gallery_admin_init(){
-        register_setting( 'sfn_gallery_options', 'sfn_gallery_options', 'sfn_gallery_validate_options' );
+        register_setting(
+            'sfn_gallery_options',
+            'sfn_gallery_options',
+            'sfn_gallery_validate_options'
+        );
+        add_settings_section(
+            'sfn_gallery_main_slide',
+            'Main Slide Settings',
+            'sfn_gallery_section_text',
+            'sfn_gallery'
+        );
+        add_settings_field(
+            'sfn_gallery_main_slide_width',
+            'Slide Width',
+            'sfn_gallery_setting_input',
+            'sfn_gallery',
+            'sfn_gallery_main_slide'
+        );
 
-        add_settings_section( 'sfn_gallery_main', 'SFNGallery Settings', 'sfn_gallery_section_text', 'sfn_gallery' );
+    }
 
-        add_settings_field( 'sfn_gallery_slide_width', 'Slide Width', 'sfn_gallery_slide_width', 'sfn_gallery_options', 'sfn_gallery_main' );
+    // Draw the section header
+    function sfn_gallery_section_text() {
+        echo '<p>Slide Dimensions</p>';
+    }
+
+    // Display and fill the form field
+    function sfn_gallery_setting_input() {
+        // get option 'text_string' value from the database
+        $options = get_option( 'sfn_gallery_options' );
+        $text_string = $options['text_string'];
+        // echo the field
+        echo "<input id='text_string' name='sfn_gallery_options[text_string]' type='text' value='$text_string' />";
+    }
+
+    // Validate user input (we want text only)
+    function sfn_gallery_validate_options( $input ) {
+        $valid['text_string'] = preg_replace( '/[^a-zA-Z]/', '', $input['text_string'] );
+
+        if( $valid['text_string'] != $input['text_string'] ) {
+            add_settings_error(
+                'sfn_galery_text_string',
+                'sfn_gallery_texterror',
+                'Incorrect value entered!',
+                'error'
+            );
+        }
+
+        return $valid;
     }
 
 ?>
