@@ -61,7 +61,15 @@
     }
 
     // Display and fill the form field
-    function sfn_gallery_setting_input() {
+    function sfn_gallery_main_slide_width_input() {
+        // get option 'text_string' value from the database
+        $options = get_option( 'sfn_gallery_options' );
+        $text_string = $options['text_string'];
+        // echo the field
+        echo "<input id='text_string' name='sfn_gallery_options[text_string]' type='text' value='$text_string' />";
+    }
+
+    function sfn_gallery_thumbnail_width_input() {
         // get option 'text_string' value from the database
         $options = get_option( 'sfn_gallery_options' );
         $text_string = $options['text_string'];
