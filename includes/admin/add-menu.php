@@ -40,25 +40,18 @@
 
     // Register and define the settings
     add_action('admin_init', 'sfn_gallery_admin_init');
+
     function sfn_gallery_admin_init(){
-        register_setting(
-            'sfn_gallery_options',
-            'sfn_gallery_options',
-            'sfn_gallery_validate_options'
-        );
-        add_settings_section(
-            'sfn_gallery_main_slide',
-            'Main Slide Settings',
-            'sfn_gallery_section_text',
-            'sfn_gallery'
-        );
-        add_settings_field(
-            'sfn_gallery_main_slide_width',
-            'Slide Width',
-            'sfn_gallery_setting_input',
-            'sfn_gallery',
-            'sfn_gallery_main_slide'
-        );
+
+        register_setting( 'sfn_gallery_options', 'sfn_gallery_options', 'sfn_gallery_validate_options' );
+
+        // main settings
+        add_settings_section('sfn_gallery_slide_settings', 'Slide Settings', 'sfn_gallery_section_text', 'sfn_gallery' );
+
+            // main slide
+            add_settings_field( 'sfn_gallery_main_slide_width', 'Slide Width', 'sfn_gallery_main_slide_width_input', 'sfn_gallery', 'sfn_gallery_slide_settings');
+             // thumbnail
+            add_settings_field( 'sfn_gallery_thumbnail_slide_width', 'Thumbnail Slide Width', 'sfn_gallery_thumbnail_width_input', 'sfn_gallery', 'sfn_gallery_slide_settings');
 
     }
 
