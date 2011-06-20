@@ -9,8 +9,20 @@
 
     };
 
+    /* bluilding the actual settings page */
     function sfn_gallery_settings_page() {
 
-    };
+?>
+
+    <div class="wrap">
+
+    <?php screen_icon(); ?>
+    <h2>SFNGallery Settings</h2>
+
+    </div><!-- /.wrap -->
+
+<?php
+
+    }; //ends sfn_gallery_settings_page
 
 ?>
