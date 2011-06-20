@@ -28,6 +28,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     /* callls the new CPT */
     require_once( plugin_dir_path( __FILE__ ) . '/includes/add-cpt.php' );
 
+    /* calls the new Custom Taxonomy */
+    require_once( plugin_dir_path( __FILE__ ) . '/includes/add-taxonomy.php' );
+
     /* callls the new CPT */
     require_once( plugin_dir_path( __FILE__ ).'/includes/add-meta-boxes.php' );
 
@@ -45,7 +48,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
     /*
      *
-     * todo add taxonomy to categorize slides
      * todo add ability to select taxonomy by slug in the function
      *
      * todo Admin settings
