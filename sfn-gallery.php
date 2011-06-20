@@ -25,7 +25,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-    /* callls the new CPT */
+    /* calls the new CPT */
     require_once( plugin_dir_path( __FILE__ ) . '/includes/add-cpt.php' );
 
     /* calls the new Custom Taxonomy */
