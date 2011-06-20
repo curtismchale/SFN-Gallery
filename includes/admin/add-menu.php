@@ -21,6 +21,15 @@
 
         <form action="options.php" method="post">
 
+<?php
+
+            settings_fields( 'sfn_gallery_options' );
+            do_settings_sections( 'sfn_gallery' );
+
+?>
+
+            <input name="Submit" type="submit" value="Save Changes" />
+
         </form>
 
     </div><!-- /.wrap -->
