@@ -65,6 +65,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
      *
      * todo uninstall function to remove data from the database
      *      - should prompt user before removing just in case
+     *      - allow export of the plugin data
      *
      *  todo custom slide effects?
      *  todo option to not display the navigation thumbnails
