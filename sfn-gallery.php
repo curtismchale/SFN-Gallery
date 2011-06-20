@@ -31,6 +31,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     /* calls the new Custom Taxonomy */
     require_once( plugin_dir_path( __FILE__ ) . '/includes/add-taxonomy.php' );
 
+    /* calls the new Custom Taxonomy */
+    require_once( plugin_dir_path( __FILE__ ) . '/includes/admin/add-menu.php' );
+
     /* callls the new CPT */
     require_once( plugin_dir_path( __FILE__ ).'/includes/add-meta-boxes.php' );
 
