@@ -5,7 +5,7 @@
 
     function sfn_gallery_create_options_page() {
 
-        add_options_page( 'SFNGallery Settings', 'SFNGallery Settings', 'manage_options', __FILE__, 'sfn_gallery_settings_page' );
+        add_options_page( 'SFNGallery Settings', 'SFNGallery Settings', 'manage_options', 'sfn_gallery', 'sfn_gallery_settings_page' );
 
     };
 
